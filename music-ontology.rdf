@@ -7,7 +7,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:music-ontology="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
     
 
 
