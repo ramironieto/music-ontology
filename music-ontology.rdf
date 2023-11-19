@@ -28,7 +28,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#albumGanaPremio">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorAlbum"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Álbum"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
     </owl:ObjectProperty>
     
@@ -38,6 +38,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#albumIncluyeCancion">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionPerteneceAlbum"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
     </owl:ObjectProperty>
     
 
@@ -46,6 +48,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#albumLanzadoPorArtista">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#artistaLanzaAlbum"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
     </owl:ObjectProperty>
     
 
@@ -54,6 +58,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#albumLanzadoPorBanda">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaLanzaAlbum"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
     </owl:ObjectProperty>
     
 
@@ -62,6 +68,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#artistaExponenteDeGenero">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoTieneExponenteArtista"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#artistaInterpretaCancion"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionTieneGenero"/>
@@ -107,7 +115,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#artistaInterpretaCancion">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionInterpretadaPorArtista"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#artistaIntegraBanda"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaInterpretaCancion"/>
@@ -120,7 +128,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#artistaLanzaAlbum">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Álbum"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#artistaIntegraBanda"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaLanzaAlbum"/>
@@ -157,6 +165,12 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaExponenteDeGenero">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoTieneExponenteBanda"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaInterpretaCancion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionTieneGenero"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -181,7 +195,10 @@
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaIntegradaPorArtista -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaIntegradaPorArtista"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaIntegradaPorArtista">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+    </owl:ObjectProperty>
     
 
 
@@ -190,7 +207,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaInterpretaCancion">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionInterpretadaPorBanda"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaLanzaAlbum"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#albumIncluyeCancion"/>
@@ -203,7 +220,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#bandaLanzaAlbum">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Álbum"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
     </owl:ObjectProperty>
     
 
@@ -222,7 +239,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionGanaPremio">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorCancion"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
     </owl:ObjectProperty>
     
@@ -230,21 +247,27 @@
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionInterpretadaPorArtista -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionInterpretadaPorArtista"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionInterpretadaPorArtista">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionInterpretadaPorBanda -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionInterpretadaPorBanda"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionInterpretadaPorBanda">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionPerteneceAlbum -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionPerteneceAlbum">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Álbum"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
     </owl:ObjectProperty>
     
 
@@ -253,21 +276,27 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#cancionTieneGenero">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoAbarcaCancion"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Género"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#eventoAsistidoPorArtista -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#eventoAsistidoPorArtista"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#eventoAsistidoPorArtista">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Evento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#eventoAsistidoPorBanda -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#eventoAsistidoPorBanda"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#eventoAsistidoPorBanda">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Evento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
+    </owl:ObjectProperty>
     
 
 
@@ -275,20 +304,25 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#familiaIncluyeInstrumento">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#instrumentoIncluidoEnFamilia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Familia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Instrumento"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoAbarcaCancion -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoAbarcaCancion"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoAbarcaCancion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoTieneExponenteArtista -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoTieneExponenteArtista">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Género"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
     </owl:ObjectProperty>
     
@@ -297,7 +331,7 @@
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoTieneExponenteBanda -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#generoTieneExponenteBanda">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Género"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
     </owl:ObjectProperty>
     
@@ -305,7 +339,10 @@
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#instrumentoEsTocadoPorArtista -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#instrumentoEsTocadoPorArtista"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#instrumentoEsTocadoPorArtista">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Instrumento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+    </owl:ObjectProperty>
     
 
 
@@ -320,25 +357,37 @@
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorAlbum -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorAlbum"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorAlbum">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorArtista -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorArtista"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorArtista">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorBanda -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorBanda"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorBanda">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorCancion -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorCancion"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#premioGanadoPorCancion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
+    </owl:ObjectProperty>
     
 
 
@@ -353,9 +402,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#American_Music_Award -->
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#American_Music_Award">
+    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#AmericanMusicAward -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#AmericanMusicAward">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
     </owl:Class>
     
@@ -367,9 +422,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BRIT_Awards -->
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BRITAwards -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BRIT_Awards">
+    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BRITAwards">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
     </owl:Class>
     
@@ -381,17 +436,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Billboard_Music_Award -->
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BillboardMusicAward -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Billboard_Music_Award">
+    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BillboardMusicAward">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción -->
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
     
 
 
@@ -415,10 +470,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#De_Estudio -->
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#DeEstudio -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#De_Estudio">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Álbum"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#DeEstudio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#EnVivo"/>
     </owl:Class>
     
 
@@ -443,10 +499,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#En_Vivo -->
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#EnVivo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#En_Vivo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Álbum"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#EnVivo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
     </owl:Class>
     
 
@@ -463,17 +519,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
+    
+
+
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Género -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Género"/>
     
 
 
@@ -517,12 +573,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Álbum -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Álbum"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -537,9 +587,54 @@
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#A_Day_In_The_Life -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#A_Day_In_The_Life">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
         <music-ontology:cancionPerteneceAlbum rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Sgt_Peppers"/>
         <music-ontology:cancionTieneGenero rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Art_Garfunkel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Art_Garfunkel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+        <music-ontology:artistaIntegraBanda rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Simon_And_Garfunkel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Bridge_Over_Troubled_Water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Bridge_Over_Troubled_Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
+        <music-ontology:cancionGanaPremio rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy_Mejor_Cancion_1970"/>
+        <music-ontology:cancionTieneGenero rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Folk_Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cuerdas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cuerdas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Familia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Folk_Rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Folk_Rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#George_Harrison -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#George_Harrison">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+        <music-ontology:artistaIntegraBanda rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#The_Beatles"/>
+        <music-ontology:artistaTocaInstrumento rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Guitarra_Acustica"/>
     </owl:NamedIndividual>
     
 
@@ -552,11 +647,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#John_Lennon -->
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy_Mejor_Cancion_1970 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#John_Lennon">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
-        <music-ontology:artistaIntegraBanda rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#The_Beatles"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy_Mejor_Cancion_1970">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Guitarra_Acustica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Guitarra_Acustica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Instrumento"/>
+        <music-ontology:instrumentoIncluidoEnFamilia rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cuerdas"/>
     </owl:NamedIndividual>
     
 
@@ -570,10 +673,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Paul_Simon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Paul_Simon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
+        <music-ontology:artistaIntegraBanda rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Simon_And_Garfunkel"/>
+        <music-ontology:artistaTocaInstrumento rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Guitarra_Acustica"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Rock -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Rock">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Género"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -590,9 +703,18 @@
     <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Sgt_Peppers -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Sgt_Peppers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#De_Estudio"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#DeEstudio"/>
         <music-ontology:albumGanaPremio rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy_Mejor_Album_1967"/>
         <music-ontology:albumLanzadoPorBanda rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#The_Beatles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Simon_And_Garfunkel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Simon_And_Garfunkel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Duos"/>
+        <music-ontology:bandaInterpretaCancion rdf:resource="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Bridge_Over_Troubled_Water"/>
     </owl:NamedIndividual>
     
 
@@ -616,23 +738,47 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#American_Music_Award"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Album"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Artista"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BRIT_Awards"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Billboard_Music_Award"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Canción"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cuartetos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#De_Estudio"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Duos"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#En_Vivo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Banda"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cancion"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Evento"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Familia"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Género"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Genero"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Instrumento"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Oscar"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Trios"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Premio"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#AmericanMusicAward"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BRITAwards"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#BillboardMusicAward"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Oscar"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#A_Day_In_The_Life"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Art_Garfunkel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Bridge_Over_Troubled_Water"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Cuerdas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Folk_Rock"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#George_Harrison"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy_Mejor_Album_1967"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Grammy_Mejor_Cancion_1970"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Guitarra_Acustica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Paul_McCartney"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Paul_Simon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Rock"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Rooftop_Concert"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Sgt_Peppers"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#Simon_And_Garfunkel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ramiro/ontologies/2023/9/music-ontology#The_Beatles"/>
+        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 
